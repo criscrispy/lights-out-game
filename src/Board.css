@@ -37,6 +37,16 @@ table tr:last-child td:first-child {
 	text-align: end;
 }
 
+.Board-title-winner {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.emoji {
+	font-size: 4rem;
+}
+
 .neon-orange {
 	font-family: neon;
 	color: #fb4264;

@@ -33,7 +33,7 @@ class Board extends Component {
   static defaultProps = {
     nrows : 5,
     ncols : 5,  
-    chanceLightStartsOn : 0,
+    chanceLightStartsOn : 0.0,
   }
 
   constructor(props) {
@@ -106,10 +106,11 @@ class Board extends Component {
     // if the game is won, just show a winning msg & render nothing else 
     if(this.state.hasWon){
       return (
-        <div className="Board-title-top">
+        <div className="Board-title-winner">
           <div className="Winner">
             <span className="neon-orange">YOU</span>
             <span className="neon-blue">WIN</span>
+            {/* <span role='img' aria-label='claping partying face' className='emoji'>👏🥳</span> */}
           </div>
         </div>
       )
