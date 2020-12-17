@@ -1,9 +1,27 @@
 .Cell {
-	height: 100px;
-	width: 100px;
-	border-radius: 4px;
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 0.12rem;
 	background-color: #263228;
 	transition: background-color 0.7s ease;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	.Cell {
+		height: 4.25rem;
+		width: 4.25rem;
+		border-radius: 0.2rem;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.Cell {
+		height: 6.25rem;
+		width: 6.25rem;
+		border-radius: 0.25rem;
+	}
 }
 
 .Cell-lit {
