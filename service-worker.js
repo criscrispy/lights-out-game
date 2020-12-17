@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/lights-out-game/precache-manifest.6a33b24e07b56c0a413a0a3477397857.js"
+  "/lights-out-game/precache-manifest.17af97652bb705e1d44938786b3ce5bb.js"
 );
 
 workbox.clientsClaim();
