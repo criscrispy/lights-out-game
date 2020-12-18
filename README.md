@@ -1,7 +1,9 @@
 # Project : Lights-out-game
 
 To view a demo example on Github page, **[click here](https://criscrispy.github.io/lights-out-game/)**\
-React  / CSS / JSX / Javascript
+React  / CSS / JSX / Javascript\
+Shoutout to **[Thomas Trinca](https://codepen.io/Trinca)** for CSS ideas from\
+ **[this specific codepen](https://codepen.io/Trinca/pen/NAvpWa)**
 
 ## Description
 
