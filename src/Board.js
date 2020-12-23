@@ -100,62 +100,61 @@ class Board extends Component {
 
 
   /** Render game board or winning message. */
-
-  render() {
-
-    // if the game is won, just show a winning msg & render nothing else 
-    if(this.state.hasWon){
-      return (
-        <div className="Board-title-winner">
-          <div className="Winner">
-            <span className="neon-orange">YOU</span>
-            <span className="neon-blue">WIN</span>
-            {/* <span role='img' aria-label='claping partying face' className='emoji'>👏🥳</span> */}
-          </div>
-        </div>
-      )
-    }
-
-    // TODO
-    // make table board
-
-    // let tableRowWithBoards = Array(this.props.nrows)
-    //   .fill([])
-    //   .map((rowValue, rowIndex) => Array(this.props.ncols).fill(<Cell isLit = {this.state.board[rowIndex]}/>)
-    //   );
-
+  // make table board
+  makeTable(){
     let tableRowWithCells = [];
     for (let y = 0; y < this.props.nrows; y++) {
       let row = [];
       for (let x = 0; x < this.props.ncols; x++) {
         let coordinates = `${y}-${x}`;
-          row.push(
-            <Cell 
-              key={coordinates} 
-              isLit={this.state.board[y][x]}
-              flipCellsAroundMe ={() => this.flipCellsAround(coordinates)}
-              
-            />
-          )
+        row.push(
+          <Cell
+            key={coordinates}
+            isLit={this.state.board[y][x]}
+            flipCellsAroundMe={() => this.flipCellsAround(coordinates)}
+          />
+        )
       }
-    tableRowWithCells.push(<tr key={y}>{row}</tr>);
+      tableRowWithCells.push(<tr key={y}>{row}</tr>);
     }
-    return (
-      <div>
-        <div className="Board-title-top">
-          <div className="neon-orange">Lights</div>
-        </div>
-        <table className="Board">
-          <tbody>{tableRowWithCells}</tbody>
-        </table>
-        <div className="Board-title-bottom">
-          <div className="neon-blue">Out</div>
-        </div>
-      </div>
- 
+    return(
+      <table className="Board">
+        <tbody>{tableRowWithCells}</tbody>
+      </table>
     );
   }
+
+
+
+  render() {
+    // if the game is won, just show a winning msg & render nothing else 
+      return (
+        <div>
+          {this.state.hasWon ? (
+            <div className="Board-title-winner">
+              <div className="Winner">
+                <span className="neon-orange">YOU</span>
+                <span className="neon-blue">WIN</span>
+              </div>
+            </div>
+          ) : (
+              <div>
+                <div className="Board-title-top">
+                  <div className="neon-orange">Lights</div>
+                </div>
+                {this.makeTable()}
+                <div className="Board-title-bottom">
+                  <div className="neon-blue">Out</div>
+                </div>
+              </div>
+          )}
+        </div>
+      );
+              
+  }
 }
+
+
 
     // TODO
 
