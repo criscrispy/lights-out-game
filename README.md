@@ -16,6 +16,8 @@ begins with some of the buttons turned on, or lit. Pressing a button changes \
 the status of that button- i.e., off to on or on to off- as well as the status of \
 each its neighbors (top, bottom, left and right).
 
+![Lights out game](lights-out-game-750.jpeg "Ligths Out game")
+
 Follow the links to the **[the wikipedia page](https://en.wikipedia.org/wiki/Lights_Out_(game))** of the lights-out game\
 and **[an article about how to determine its solvability](https://ida.mtholyoke.edu/bitstream/handle/10166/693/375.pdf?sequence=1&isAllowed=y)**
 
